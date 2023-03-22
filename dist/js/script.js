@@ -14,3 +14,10 @@ closeElem.addEventListener('click', () => {
 overlay.addEventListener('click', () => {
     menu.classList.remove('active');
 });
+
+const counters = document.querySelectorAll('.progress__item-percent'),
+      lines = document.querySelectorAll('.progress__item-done');
+
+counters.forEach((item, i) => {
+    lines[i].style.width = item.innerHTML;
+});
